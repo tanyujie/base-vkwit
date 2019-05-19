@@ -1,0 +1,19 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    non-secure-port: ${PORT:8989}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+#关闭弹出的默认认证登录框
+security:
+  basic:
+    enabled: false
