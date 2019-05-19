@@ -1,4 +1,4 @@
-package org.easymis.vkwit.zuul;
+package org.easymis.vkwit.zuul.filter;
 
 import javax.servlet.http.HttpServletRequest;
 

@@ -6,4 +6,4 @@ server:
       name: GATWAY_SESSION
 spring:
   application:
-    name: base-gatway
+    name: api-gateway

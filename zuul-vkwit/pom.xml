@@ -10,8 +10,8 @@
 	<groupId>org.easymis.wit</groupId>
 	<artifactId>zuul</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>zuul</name>
-	<description>Demo project for Spring Boot</description>
+	<name>base-getway</name>
+	<description>api网关</description>
 
 	<properties>
 	</properties>
@@ -96,5 +96,30 @@
 			</plugin>
 		</plugins>
 	</build>
-
+ <!-- 结合docker的maven打包方式,并上传提交创建的镜像 -->
+    <!--<build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${docker.plugin.version}</version>
+                <configuration>
+                    <imageName>${project.artifactId}</imageName>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>-->
+    <!-- 结合docker的maven打包方式,并上传提交创建的镜像 -->
 </project>
