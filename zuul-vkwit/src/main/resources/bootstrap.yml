@@ -1,5 +1,9 @@
 server:
   port: 8081
+#网关的session名字，建议每个微服务都单独命名
+  session:
+    cookie:
+      name: GATWAY_SESSION
 spring:
   application:
-    name: basezuul
+    name: base-gatway
